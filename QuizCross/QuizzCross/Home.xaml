@@ -1,0 +1,93 @@
+﻿<Window x:Class="QuizzCross.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizzCross"
+        mc:Ignorable="d"
+        Title="QuizCross" Height="652.776" Width="526.127" Visibility="Visible">
+    <Grid Margin="0,0,0,0">
+        <Label x:Name="titleBack" Content="QuizCross" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="494" Height="63" FontSize="36" FontFamily="Tahoma" Background="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MouseDoubleClick="TitleBack_MouseDoubleClick"/>
+
+        <Grid x:Name="homeScreen" Margin="0,0,0,0">
+            <Button x:Name="profileButton" Content="Profile" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="ProfileButton_Click"/>
+            <Button x:Name="statsButton" Content="Stats" HorizontalAlignment="Left" Margin="399,138,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="StatsButton_Click"/>
+            <Button x:Name="topListButton" Content="Top List" Margin="209,138,209,0" VerticalAlignment="Top" Height="40" Click="TopListButton_Click"/>
+            <Label Content="GIOCA IN SINGLE PLAYER" Margin="147,260,146,0" VerticalAlignment="Top" FontSize="18"/>
+            <Button x:Name="singlePlayer" Content="Single Player" HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top" Width="489" Height="54" Click="SinglePlayer_Click"/>
+            <Label Content="GIOCA IN MULTI PLAYER" Margin="142,425,141,0" VerticalAlignment="Top" FontSize="18" HorizontalContentAlignment="Center"/>
+            <Button x:Name="multiPlayer" Content="Multi Player" HorizontalAlignment="Left" Margin="10,473,0,0" VerticalAlignment="Top" Width="489" Height="54" Click="MultiPlayer_Click"/>
+        </Grid>
+        <Grid x:Name="choiceScreen" HorizontalAlignment="Left" Height="544" VerticalAlignment="Top" Width="514" Margin="0,78,0,0" Background="#FF1D418D" Visibility="Hidden">
+            <Button x:Name="choiseBut_0" Content="Button" HorizontalAlignment="Left" Margin="82,144,0,0" VerticalAlignment="Top" Width="100" Height="100"  Click="Categoria_Click"/>
+            <Button x:Name="choiseBut_1" Content="Button" HorizontalAlignment="Left" Margin="209,144,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="Categoria_Click"/>
+            <Button x:Name="choiseBut_2" Content="Button" HorizontalAlignment="Left" Margin="335,144,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="Categoria_Click"/>
+            <Button x:Name="choiseBut_3" Content="Button" HorizontalAlignment="Left" Margin="82,271,0,0" VerticalAlignment="Top" Width="100" Height="100"  Click="Categoria_Click"/>
+            <Button x:Name="choiseBut_4" Content="Button" HorizontalAlignment="Left" Margin="209,271,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="Categoria_Click"/>
+            <Button x:Name="choiseBut_5" Content="Button" HorizontalAlignment="Left" Margin="335,271,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="Categoria_Click"/>
+            <Button x:Name="choiseBut_6" Content="Button" HorizontalAlignment="Left" Margin="82,398,0,0" VerticalAlignment="Top" Width="100" Height="100"  Click="Categoria_Click"/>
+            <Button x:Name="choiseBut_7" Content="Button" HorizontalAlignment="Left" Margin="209,398,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="Categoria_Click"/>
+            <Button x:Name="choiseBut_8" Content="Button" HorizontalAlignment="Left" Margin="335,398,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="Categoria_Click"/>
+            <Image x:Name="choiceImageProfile" HorizontalAlignment="Left" Height="82" Margin="10,10,0,0" VerticalAlignment="Top" Width="84"/>
+            <Label Content="Username :" HorizontalAlignment="Left" Margin="99,10,0,0" VerticalAlignment="Top" Width="115" FontSize="18"/>
+            <Label Content="Punteggio :" HorizontalAlignment="Left" Margin="99,58,0,0" VerticalAlignment="Top" Width="115" FontSize="18"/>
+            <Label x:Name="choiceUser" Content="USERNAME" HorizontalAlignment="Left" Margin="214,10,0,0" VerticalAlignment="Top" FontSize="18" Width="267"/>
+            <Label x:Name="choicePunti" Content="10000 Pt." HorizontalAlignment="Left" Margin="214,58,0,0" VerticalAlignment="Top" FontSize="18" Width="267"/>
+
+        </Grid>
+        <Grid x:Name="gameScreen" HorizontalAlignment="Left" Height="544" VerticalAlignment="Top" Width="514" Margin="0,78,0,0" Background="#FF8B1111" Visibility="Hidden">
+            <Viewbox HorizontalAlignment="Left" Height="151" Margin="33,19,0,0" VerticalAlignment="Top" Width="447" Stretch="Uniform">
+                <TextBlock x:Name="testoDomanda" FontSize="20"/>
+            </Viewbox>
+            <Button x:Name="risposta_0" Content="Button" HorizontalAlignment="Left" Margin="33,184,0,0" VerticalAlignment="Top" Width="447" Height="58" Click="ConfermaRisp_Click"/>
+            <Button x:Name="risposta_1" Content="Button" HorizontalAlignment="Left" Margin="33,262,0,0" VerticalAlignment="Top" Width="447" Height="58" Click="ConfermaRisp_Click"/>
+            <Button x:Name="risposta_2" Content="Button" HorizontalAlignment="Left" Margin="33,340,0,0" VerticalAlignment="Top" Width="447" Height="58" Click="ConfermaRisp_Click"/>
+            <Button x:Name="risposta_3" Content="Button" HorizontalAlignment="Left" Margin="33,418,0,0" VerticalAlignment="Top" Width="447" Height="58" Click="ConfermaRisp_Click"/>
+            <Button x:Name="backCategoria" Content="TORNA INDIETRO" Margin="132,493,132,0" VerticalAlignment="Top" Height="41" Click="BackCategoria_Click"/>
+
+        </Grid>
+        <Grid x:Name="statScreen" HorizontalAlignment="Left" Height="544" VerticalAlignment="Top" Width="514" Margin="0,78,0,0" Background="#FF70AE17" Visibility="Hidden">
+            <Image x:Name="statImageProfile" HorizontalAlignment="Left" Height="82" Margin="10,10,0,0" VerticalAlignment="Top" Width="84"/>
+            <Label Content="Username :" HorizontalAlignment="Left" Margin="99,10,0,0" VerticalAlignment="Top" Width="115" FontSize="18"/>
+            <Label Content="Punteggio :" HorizontalAlignment="Left" Margin="99,58,0,0" VerticalAlignment="Top" Width="115" FontSize="18"/>
+            <Label x:Name="statUser" Content="USERNAME" HorizontalAlignment="Left" Margin="214,10,0,0" VerticalAlignment="Top" FontSize="18" Width="267"/>
+            <Label x:Name="statPunti" Content="10000 Pt." HorizontalAlignment="Left" Margin="214,58,0,0" VerticalAlignment="Top" FontSize="18" Width="267"/>
+            <Label Content="Divisione di appartenenza :" HorizontalAlignment="Left" Margin="9,125,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Label x:Name="statDivisione" Content="Bronzo" HorizontalAlignment="Left" Margin="9,159,0,0" VerticalAlignment="Top" FontSize="18" Width="224"/>
+            <Label Content="Percentuale risposte esatte :" HorizontalAlignment="Left" Margin="7,362,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Label x:Name="statPercEsatte" Content="50 %" HorizontalAlignment="Left" Margin="237,362,0,0" VerticalAlignment="Top" FontSize="18" Width="224"/>
+            <Label Content="Numero risposte date         :" HorizontalAlignment="Left" Margin="7,323,0,0" VerticalAlignment="Top" FontSize="18" />
+            <Label x:Name="statNumRisp" Content="4021" HorizontalAlignment="Left" Margin="238,323,0,0" VerticalAlignment="Top" FontSize="18" Width="224"/>
+            <Label Content="Percentuale risposte errate :" HorizontalAlignment="Left" Margin="7,401,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Label x:Name="statPercErrate" Content="50 %" HorizontalAlignment="Left" Margin="237,401,0,0" VerticalAlignment="Top" FontSize="18" Width="224"/>
+            <Label Content="Classifica :" HorizontalAlignment="Left" Margin="3,466,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Label x:Name="statPosizione" Content="1" HorizontalAlignment="Left" Margin="3,500,0,0" VerticalAlignment="Top" FontSize="18" Width="84" HorizontalContentAlignment="Right"/>
+            <Label Content="Posizione" HorizontalAlignment="Left" Margin="99,500,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Label Content="Numero partite giocate :" HorizontalAlignment="Left" Margin="9,226,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Label x:Name="statNumPartite" Content="453" HorizontalAlignment="Left" Margin="214,226,0,0" VerticalAlignment="Top" FontSize="18" Width="224"/>
+            <Label Content="Numero partite vinte     :" HorizontalAlignment="Left" Margin="9,265,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Label x:Name="statGameVinti" Content="12" HorizontalAlignment="Left" Margin="214,265,0,0" VerticalAlignment="Top" FontSize="18" Width="224"/>
+            <Image x:Name="statImageRank" HorizontalAlignment="Left" Height="72" Margin="381,125,0,0" VerticalAlignment="Top" Width="100"/>
+        </Grid>
+        <Grid x:Name="topListScreen" HorizontalAlignment="Left" Height="544" VerticalAlignment="Top" Width="514" Margin="0,78,0,0" Background="#FF54245F" Visibility="Hidden">
+            <DataGrid x:Name="topRankGrid" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="494"/>
+            <DataGrid x:Name="rankGrid" HorizontalAlignment="Left" Height="410" Margin="10,124,0,0" VerticalAlignment="Top" Width="494"/>
+
+        </Grid>
+        <Grid x:Name="profileScreen" HorizontalAlignment="Left" Height="544" VerticalAlignment="Top" Width="514" Margin="0,78,0,0" Background="#FFB6A1A1" Visibility="Hidden">
+            <Image x:Name="profileImageProfile" HorizontalAlignment="Left" Height="82" Margin="10,10,0,0" VerticalAlignment="Top" Width="84"/>
+            <Label Content="Username :" HorizontalAlignment="Left" Margin="99,10,0,0" VerticalAlignment="Top" Width="115" FontSize="18"/>
+            <Label Content="Punteggio :" HorizontalAlignment="Left" Margin="99,58,0,0" VerticalAlignment="Top" Width="115" FontSize="18"/>
+            <Label x:Name="profileUser" Content="USERNAME" HorizontalAlignment="Left" Margin="214,10,0,0" VerticalAlignment="Top" FontSize="18" Width="267"/>
+            <Label x:Name="profilePunti" Content="10000 Pt." HorizontalAlignment="Left" Margin="214,58,0,0" VerticalAlignment="Top" FontSize="18" Width="267"/>
+            <Label Content="Cambia Username :" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <TextBox x:Name="profileUserChange" HorizontalAlignment="Left" Height="40" Margin="10,212,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="267" FontSize="20" HorizontalContentAlignment="Center" GotFocus="Username_GotFocus" LostFocus="Username_LostFocus"/>
+            <Button x:Name="profileButChangeUser" Content="Cambia" HorizontalAlignment="Left" Margin="365,212,0,0" VerticalAlignment="Top" Width="139" Height="40" FontSize="18" Click="CambiaUser_Click"/>
+            <Label Content="Cambia Password :" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <PasswordBox x:Name="profilePassChange" HorizontalAlignment="Left" Height="40" Margin="10,406,0,0" VerticalAlignment="Top" Width="267" FontSize="20" HorizontalContentAlignment="Center" GotFocus="Password_GotFocus"/>
+            <PasswordBox x:Name="profilePassChangeConfirm" HorizontalAlignment="Left" Height="40" Margin="10,451,0,0" VerticalAlignment="Top" Width="267" FontSize="20" HorizontalContentAlignment="Center" GotFocus="PasswordConfirm_GotFocus"/>
+            <Button x:Name="profileButChangePass" Content="Cambia" HorizontalAlignment="Left" Margin="365,451,0,0" VerticalAlignment="Top" Width="139" Height="40" FontSize="18" Click="CambiaPass_Click"/>
+        </Grid>
+    </Grid>
+
+</Window>
